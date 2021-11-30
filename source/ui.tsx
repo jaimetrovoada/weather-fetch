@@ -20,11 +20,18 @@ const App: FC<{ city?: string, unit?: string }> = ({ city = 'London', unit = "me
     <Box borderStyle="round" borderColor="yellow" flexDirection="column">
       <Box>
         <Text color="red">{city.toUpperCase()}</Text>
-        <Text color="yellow" bold>{getIcon(data?.weather[0]?.main)}</Text>
+        <Text bold>{getIcon(data?.weather[0]?.icon)}</Text>
       </Box>
-      <Text>
-        Current temperature is, <Text color="green">{data?.main?.temp}{unit === "metric" ? 'C' : 'F'}</Text>
-      </Text>
+      <Box flexDirection="column">
+        <Text>
+          Currently is <Text color="green">{data?.weather[0].description}</Text>,</Text>
+        <Text> with a temperature of <Text color="green">{data?.main?.temp}{unit === "metric" ? 'C' : 'F'}</Text></Text>
+      </Box>
+      <Box flexDirection="column">
+        <Text>Max. temperature of: {data?.main?.temp_max}{unit === "metric" ? 'C' : 'F'}</Text>
+        <Text>Min. temperature of: {data?.main?.temp_min}{unit === "metric" ? 'C' : 'F'}</Text>
+        <Text>Wind speeds of: {data?.wind?.speed}{unit === "metric" ? 'kph' : 'mph'}</Text>
+      </Box>
     </Box>
   )
 };
