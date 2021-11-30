@@ -1,28 +1,22 @@
 const Icons: any = {
-  'main': {
-    "Thunderstorm": {
-      '\ue31d',
-      "Drizzle": {
-        '\ue319',
-        "Rain": {
-          '\ue318',
-          "Snow": {
-            '\ue308',
-            'Mist': '\uf75f',
-            'Smoke': '\ue35c',
-            'Haze': '\ue3ae',
-            'Fog': '\ue303',
-            'Sand': '\ue37a',
-            'Dust': '\ue35d',
-            'Ash': '\ue3c0',
-            'Squall': '\ue3c6',
-            'Tornado': '\ue351',
-            "Clear": '\ue30d',
-            "Clouds": '\ue30c',
-          }
-        }
+	Thunderstorm: { unicode: "\ue31d", emoji: "⛈" },
+	Drizzle: { unicode: "\ue319", emoji: "🌧" },
+	Rain: { unicode: "\ue318", emoji: "🌧" },
+	Snow: { unicode: "\ue308", emoji: "❄️" },
+	Mist: { unicode: "\uf75f", emoji: "🌫" },
+	Smoke: { unicode: "\ue35c", emoji: "🚬" },
+	Haze: { unicode: "\ue3ae", emoji: "🌫" },
+	Fog: { unicode: "\ue303", emoji: "🌫" },
+	Sand: { unicode: "\ue37a", emoji: "🌫" },
+	Dust: { unicode: "\ue35d", emoji: "🌫" },
+	Ash: { unicode: "\ue3c0", emoji: "🌫" },
+	Squall: { unicode: "\ue3c6", emoji: "🌫" },
+	Tornado: { unicode: "\ue351", emoji: "🌪️" },
+	Clear: { unicode: "\ue30d", emoji: "☀️" },
+	Clouds: { unicode: "\ue30c", emoji: "☁️" },
+};
 
-const getIcon = (main: string) => {
-          const icon = Icons.main[`${main}`]
-          return icon
-        }
+export const getIcon = (main: string) => {
+	const icon = Icons?.[`${main}`]?.emoji;
+	return icon;
+};
