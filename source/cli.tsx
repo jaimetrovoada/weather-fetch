@@ -9,11 +9,11 @@ const cli = meow(`
 	  $ react-weather-cli
 
 	Options
-		--name  Your name
+		--city  A city name
+  -- unit acceptable values = metric or imperial
 
 	Examples
-	  $ react-weather-cli --name=Jane
-	  Hello, Jane
+	  $ react-weather-cli --city=Tokyo --unit=metric
 `, {
   flags: {
     city: {

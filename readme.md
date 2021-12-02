@@ -22,3 +22,6 @@ npm start -- --city=[city-name] --unit=[metric or imperial]
 npm run build
 node dist/cli.js --city=[city-name] --unit=[metric or imperial]
 ```
+
+# screenshot
+<img src="./example/Screenshot_20211130_132316.png" />
